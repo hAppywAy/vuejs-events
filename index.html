@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events en vuejs</title>
+  <style>
+    .variants {
+      display: flex;
+      max-width: 200px;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <h1>Les événements en VueJS</h1>
+
+  <p>
+    Les événements permettent d'écouter les actions de l'utilisateur 
+    (par exemple click sur un bouton ou saisie d'un formulaire. 
+    Les événements déclenchent une action JavaScript qui peut soit se trouver directement 
+    dans le template, ou faire référence à une fonction qui se trouve dans les `methods` 
+    du controleur.
+  </p>
+  
+  <div id="app">
+      <!-- v-on:click ou @click => ce sont des écouteurs d'événement, equivalent addEventListener -->
+    
+      <hr>
+
+      <!-- pour rappel, addEventListener -->
+      <!-- databinding bi-directionnel avec v-model, équivalent à :value et @input sur le même <input /> -->
+      <!-- Exemple complexe: <input type="text" :value="anyString" @input="anyString = $event.target.value"> -->
+      <!-- exemple avec v-model (plus facile) -->
+  
+      <!-- faire un compteur avec deux boutons, une fois a 10, afficher un message d'alerte "vous avez atteint le max"  -->  
+
+  </div>
+
+  <!-- script vuejs -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+  <script src="app.js"></script>
+</body>
+</html>
