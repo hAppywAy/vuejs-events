@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Events en vuejs</title>
   <style>
     .variants {
@@ -15,6 +16,20 @@
 </head>
 <body>  
   <div id="app">
+    <div @click="bam()">BAM</div>
+    {{product.name}} {{product.subName}} <br>
+    {{fullName}}
+    <div v-for="variant in product.variants">
+      <div>
+        <image
+            :alt="variant.variantName"
+            :src="variant.variantImage"
+            class="img"
+            @mouseenter="onSwap(variant)"
+            @mouseleave="onSwap(variant)"
+        />
+      </div>
+    </div>
   </div>
 
   <!-- script vuejs -->

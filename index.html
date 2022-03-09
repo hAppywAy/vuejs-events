@@ -26,7 +26,10 @@
   
   <div id="app">
       <!-- v-on:click ou @click => ce sont des écouteurs d'événement, equivalent addEventListener -->
-    
+      <div>{{count}}</div>
+      <button :disabled="count === 0" @click="increments(-1)">-1</button>
+      <button :disabled="count >= 10" @click="increments(+1)">+1</button>
+
       <hr>
 
       <!-- pour rappel, addEventListener -->

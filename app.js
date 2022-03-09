@@ -4,5 +4,11 @@ const app = new Vue({
     count: 0,
     anyString: ""
   },
-  methods: {}
+  methods: {
+    increments(x) {
+      if (this.count <= 10 && this.count >= 0 && this.count + x > -1 && this.count + x < 11) {
+        this.count = this.count + x;
+      }
+    }
+  }
 })
